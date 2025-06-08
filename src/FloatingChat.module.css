@@ -1,0 +1,312 @@
+/* Container principal */
+.container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+}
+
+/* Janela do chat */
+.chatWindow {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  width: 20rem;
+  height: 24rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoContainer {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #60a5fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoCircle {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoInner {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.subtitle {
+  color: #dbeafe;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.closeButton {
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  color: #dbeafe;
+}
+
+/* Área de mensagens */
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.messageWrapper {
+  display: flex;
+}
+
+.botMessage {
+  justify-content: flex-start;
+}
+
+.userMessage {
+  justify-content: flex-end;
+}
+
+.messageBubble {
+  max-width: 75%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.botBubble {
+  background-color: white;
+  color: #374151;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.userBubble {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Área de input */
+.inputContainer {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: white;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.textareaContainer {
+  flex: 1;
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  padding-right: 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  resize: none;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  min-height: 36px;
+  max-height: 80px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.textarea::placeholder {
+  color: #9ca3af;
+}
+
+.sendButton {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.sendButton:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Botão flutuante */
+.floatingButtonContainer {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  border: 2px solid red;
+}
+
+.floatingButton {
+  width: 4rem;
+  height: 4rem;
+  background-color: #004777;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  border: 2px solid green;
+}
+
+.floatingButton:hover {
+  /* background-color: #2563eb; */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: scale(1.1);
+}
+
+.mascotContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascotImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.fallbackIcon {
+  display: none;
+  color: #3b82f6;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  .chatWindow {
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 8rem);
+    margin: 1rem;
+    position: fixed;
+    bottom: 5rem;
+    right: 0;
+  }
+
+  .floatingButtonContainer {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Animações */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chatWindow {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Scrollbar personalizada */
+.messagesContainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 2px;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
